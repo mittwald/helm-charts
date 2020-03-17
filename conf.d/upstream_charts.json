@@ -1,0 +1,10 @@
+[
+  {
+    "repository": "mittwald/servicegateway",
+    "chartPath": "deploy/helm-chart/servicegateway"
+  },
+  {
+    "repository": "mittwald/kubernetes-replicator",
+    "chartPath": "deploy/helm-chart/kubernetes-replicator"
+  }
+]

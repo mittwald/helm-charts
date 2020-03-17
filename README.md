@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+# Mittwald's Kubernetes Helm Charts
 
-You can use the [editor on GitHub](https://github.com/mittwald/helm-charts/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+![Release Charts](https://github.com/mittwald/helm-charts/workflows/Release%20Charts/badge.svg)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## Usage
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+[Helm](https://helm.sh) must be installed.
+Refer to Helm's [documentation](https://helm.sh/docs/) to get started.
 
-```markdown
-Syntax highlighted code block
+Once you've set up Helm properly, add this repository as follows:
 
-# Header 1
-## Header 2
-### Header 3
+```shell
+$ helm repo add mittwald https://helm.mittwald.de
+"mittwald" has been added to your repositories
 
-- Bulleted
-- List
+$ helm repo update
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "mittwald" chart repository
+Update Complete. ⎈ Happy Helming!⎈
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+$ helm search repo mittwald
+NAME                          	CHART VERSION	APP VERSION 	DESCRIPTION
+[...]
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Contributing
 
-### Jekyll Themes
+### Adding new Charts
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mittwald/helm-charts/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## License
+[MIT](./LICENSE)
