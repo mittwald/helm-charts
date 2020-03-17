@@ -1,0 +1,33 @@
+name: Test Release Charts
+
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      # Chart-Releaser requires helmv2
+      # Build-Charts script requires jq
+      - name: Install Requirements
+        run: >
+          sudo apt-get -qq update && sudo apt-get -qq install jq &&
+          wget -q -O /tmp/helm.tar.gz "https://get.helm.sh/helm-v2.16.3-linux-amd64.tar.gz" &&
+          tar --strip-components=1 -xvzf /tmp/helm.tar.gz linux-amd64/helm -C $(pwd) &&
+          sudo mv $(pwd)/helm /usr/local/bin/helm &&
+          chmod +x /usr/local/bin/helm
+
+      # Execute script to get charts from upstream repos
+      - name: Prepare Charts
+        run: >
+          export DEBUG="true" &&
+          bash ./scripts/build-charts.sh $(pwd)/charts $(pwd)/conf.d/upstream_charts.json
+
+      # Execute script to get charts from upstream repos
+      - name: Show Git status
+        run: >
+          git status
