@@ -3,7 +3,6 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ![Release Charts](https://github.com/mittwald/helm-charts/workflows/Release%20Charts/badge.svg)
 
-
 ## Usage
 
 [Helm](https://helm.sh) must be installed.
@@ -46,4 +45,5 @@ curl -X POST 'https://api.github.com/repos/mittwald/helm-charts/dispatches' \
 ```
 
 ## License
+
 [MIT](./LICENSE)
