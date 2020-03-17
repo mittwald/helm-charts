@@ -4,16 +4,6 @@ if [[ -n "${DEBUG}" ]]; then
     set -x
 fi
 
-HELM_BINARY="$(command -v helm)"
-if ! "${HELM_BINARY}" version | grep -q 'Version:"v3' ; then
-    HELM_BINARY="$(command -v helmv3)"
-fi
-
-if [[ ! -x "${HELM_BINARY}" || $(helm &>/dev/null ; echo ${?}) -ne 0 ]]; then
-    echo "Helm v3 is required!"
-    exit 1
-fi
-
 CHART_DESTINATION="${1}"
 if [[ -z "${CHART_DESTINATION}" ]]; then
     echo "\${CHART_DESTINATION} is empty"
