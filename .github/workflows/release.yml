@@ -23,6 +23,9 @@ jobs:
       # Execute script to get charts from upstream repos
       - name: Prepare Charts
         run: >
+          git reset --hard origin/master &&
+          git checkout master &&
+          git pull &&
           export DEBUG="true" &&
           bash ./scripts/build-charts.sh $(pwd)/charts
           "mittwald/servicegateway:deploy/helm-chart/servicegateway"
@@ -36,7 +39,6 @@ jobs:
           git config --global user.name "Mittwald Machine" &&
           git config --global user.email "opensource@mittwald.de" &&
           git remote add publisher https://mittwald-machine:${GITHUB_TOKEN}@github.com/mittwald/helm-charts.git &&
-          git checkout master &&
           git add -A &&
           (git commit -m "Automated publish: $(date -u) ${GITHUB_SHA}" || exit 0) &&
           git pull --rebase publisher master &&
