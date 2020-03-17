@@ -6,5 +6,9 @@
   {
     "repository": "mittwald/kubernetes-replicator",
     "chartPath": "deploy/helm-chart/kubernetes-replicator"
+  },
+  {
+    "repository": "mittwald/brudi-operator",
+    "chartPath": "deploy/helm-chart/brudi-operator"
   }
 ]
