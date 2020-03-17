@@ -1,0 +1,50 @@
+name: Release Charts
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Install Helm
+        run: >
+          wget -q -O /tmp/helm.tar.gz "https://get.helm.sh/helm-v3.1.2-linux-amd64.tar.gz" &&
+          tar --strip-components=1 -xvzf /tmp/helm.tar.gz linux-amd64/helm -C $(pwd) &&
+          sudo mv $(pwd)/helm /usr/local/bin/helmv3 &&
+          chmod +x /usr/local/bin/helmv3 &&
+          wget -q -O /tmp/helm.tar.gz "https://get.helm.sh/helm-v2.16.3-linux-amd64.tar.gz" &&
+          tar --strip-components=1 -xvzf /tmp/helm.tar.gz linux-amd64/helm -C $(pwd) &&
+          sudo mv $(pwd)/helm /usr/local/bin/helm &&
+          chmod +x /usr/local/bin/helm
+
+      - name: Prepare Charts
+        run: >
+          export DEBUG="true" &&
+          bash ./scripts/build-charts.sh $(pwd)/charts
+          "mittwald/servicegateway:deploy/helm-chart/servicegateway"
+
+      - name: Push Charts
+        env:
+          GITHUB_TOKEN: ${{ secrets.CR_TOKEN }}
+        run: >
+          git config --global user.name "Mittwald Machine" &&
+          git config --global user.email "opensource@mittwald.de" &&
+          git remote add publisher https://mittwald-machine:${GITHUB_TOKEN}@github.com/mittwald/helm-charts.git &&
+          git checkout master &&
+          git add -A &&
+          (git commit -m "Automated publish: $(date -u) ${GITHUB_SHA}" || exit 0) &&
+          git pull --rebase publisher master &&
+          git push publisher master
+
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.0.0-alpha.2
+        with:
+          charts_dir: ./charts
+        env:
+          CR_TOKEN: "${{ secrets.CR_TOKEN }}"
