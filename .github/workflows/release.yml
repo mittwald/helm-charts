@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - master
+  schedule:
+    # run this pipeline every 15th minute
+    - cron:  '*/15 * * * *'
+  repository_dispatch:
+    types: updateCharts
 
 jobs:
   release:
@@ -13,9 +18,10 @@ jobs:
         uses: actions/checkout@v1
 
       # Chart-Releaser requires helmv2
+      # Build-Charts script requires jq
       - name: Install Requirements
         run: >
-          apt-get -qq update && apt-get -qq install jq &&
+          sudo apt-get -qq update && sudo apt-get -qq install jq &&
           wget -q -O /tmp/helm.tar.gz "https://get.helm.sh/helm-v2.16.3-linux-amd64.tar.gz" &&
           tar --strip-components=1 -xvzf /tmp/helm.tar.gz linux-amd64/helm -C $(pwd) &&
           sudo mv $(pwd)/helm /usr/local/bin/helm &&

@@ -29,5 +29,21 @@ NAME                          	CHART VERSION	APP VERSION 	DESCRIPTION
 
 ### Adding new Charts
 
+In order to add a new chart to this repository, add the desired repository and the corresponding chart-path to [upstream_charts.json](./conf.d/upstream_charts.json).
+On push to the `master`-branch the [release workflow](./.github/workflows/release.yml) will automagically update the charts.
+
+### Updating Charts
+
+Unfortunately Github-Workflows are not capable of getting triggered manually.
+Therefore, the `release`-workflow is triggered on schedule every 15th minute: `*/15 * * * *`
+
+In case you need an immediate update of the charts in this repository, this `curl` is for you:
+
+```shell
+curl -X POST 'https://api.github.com/repos/mittwald/helm-charts/dispatches' \
+-u ${GITHUB_USERNAME}:${GITHUB_PASSWORD_OR_API_KEY} \
+-d '{"event_type": "updateCharts"}'
+```
+
 ## License
 [MIT](./LICENSE)
