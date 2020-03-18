@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   brudi-operator:
   - apiVersion: v1
+    appVersion: v0.0.1-beta.6
+    created: "2020-03-18T07:34:42.283176385Z"
+    description: A Helm chart for deploying the brudi-operator to your kubernetes
+      cluster
+    digest: 217d0912a3b2ad3cab8bfc9bcf61d20d30951752956ccee246e809cbb778ed04
+    name: brudi-operator
+    urls:
+    - https://github.com/mittwald/helm-charts/releases/download/brudi-operator-0.0.2-beta.10/brudi-operator-0.0.2-beta.10.tgz
+    version: 0.0.2-beta.10
+  - apiVersion: v1
     appVersion: v0.0.1-beta.5
     created: "2020-03-17T17:30:56.633451989Z"
     description: A Helm chart for deploying the brudi-operator to your kubernetes
