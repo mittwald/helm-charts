@@ -179,6 +179,16 @@ entries:
     urls:
     - https://github.com/mittwald/helm-charts/releases/download/kubernetes-replicator-0.1.0/kubernetes-replicator-0.1.0.tgz
     version: 0.1.0
+  kubernetes-secret-generator:
+  - apiVersion: v1
+    appVersion: v2.1.1
+    created: "2020-03-19T12:19:35.708841824Z"
+    description: Controller for replicating secrets+configmaps across namespaces
+    digest: ed3d6ea73548e7b449d698b3f40baddd86e3a1ef44d8f8c3538a4c68b9ac5b01
+    name: kubernetes-secret-generator
+    urls:
+    - https://github.com/mittwald/helm-charts/releases/download/kubernetes-secret-generator-2.1.1/kubernetes-secret-generator-2.1.1.tgz
+    version: 2.1.1
   servicegateway:
   - apiVersion: v1
     appVersion: "1.0"
