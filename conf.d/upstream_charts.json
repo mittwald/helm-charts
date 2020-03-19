@@ -10,5 +10,9 @@
   {
     "repository": "mittwald/brudi-operator",
     "chartPath": "deploy/helm-chart/brudi-operator"
+  },
+  {
+    "repository": "mittwald/kubernetes-secret-generator",
+    "chartPath": "deploy/helm-chart/kubernetes-secret-generator"
   }
 ]
