@@ -44,11 +44,6 @@ curl -X POST 'https://api.github.com/repos/mittwald/helm-charts/dispatches' \
 -d '{"event_type": "updateCharts"}'
 ```
 
-### Limitations
-
-As long as the Github Chart-Releaser workflow [is not capabale of handling `v2` charts](https://github.com/helm/chart-releaser-action/issues/7), all charts in this repository need to be `apiVersion: v1`.
-
-
 ## License
 
 [MIT](./LICENSE)
