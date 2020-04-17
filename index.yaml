@@ -201,6 +201,16 @@ entries:
     version: 0.1.0
   kubernetes-secret-generator:
   - apiVersion: v2
+    appVersion: v3.0.2
+    created: "2020-04-17T08:08:54.963975852Z"
+    description: Controller for automatically creating random secret values
+    digest: 6a32ff5275cabf543825d1db5b8b8f5012356d667b342ad979438d2486161b63
+    name: kubernetes-secret-generator
+    type: application
+    urls:
+    - https://github.com/mittwald/helm-charts/releases/download/kubernetes-secret-generator-3.0.2/kubernetes-secret-generator-3.0.2.tgz
+    version: 3.0.2
+  - apiVersion: v2
     appVersion: v3.0.1
     created: "2020-04-17T07:49:32.819806857Z"
     description: Controller for automatically creating random secret values
