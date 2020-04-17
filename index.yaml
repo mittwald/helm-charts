@@ -173,6 +173,15 @@ entries:
     version: 0.0.1
   kubernetes-replicator:
   - apiVersion: v1
+    appVersion: v2.3.0
+    created: "2020-04-17T09:51:01.777867867Z"
+    description: Controller for replicating secrets+configmaps across namespaces
+    digest: 4926663b6ad3f59886f4721ce5babf862157b764fc50f4e619a7c290f6c8e6a4
+    name: kubernetes-replicator
+    urls:
+    - https://github.com/mittwald/helm-charts/releases/download/kubernetes-replicator-2.3.0/kubernetes-replicator-2.3.0.tgz
+    version: 2.3.0
+  - apiVersion: v1
     appVersion: v2.2.5
     created: "2020-03-19T11:41:46.092833999Z"
     description: Controller for replicating secrets+configmaps across namespaces
