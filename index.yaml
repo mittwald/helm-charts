@@ -257,6 +257,16 @@ entries:
     - https://github.com/mittwald/helm-charts/releases/download/kubernetes-secret-generator-2.1.1/kubernetes-secret-generator-2.1.1.tgz
     version: 2.1.1
   servicegateway:
+  - apiVersion: v2
+    appVersion: v2.0.2
+    created: "2020-04-19T06:49:55.607737943Z"
+    description: service gateway for microservice architectures
+    digest: 877210417c00f248033ad5ff06364662f28d3c6426ecc086a465d1a1ce71aa73
+    name: servicegateway
+    type: application
+    urls:
+    - https://github.com/mittwald/helm-charts/releases/download/servicegateway-2.0.2/servicegateway-2.0.2.tgz
+    version: 2.0.2
   - apiVersion: v1
     appVersion: "1.0"
     created: "2020-03-17T07:25:29.292798665Z"
