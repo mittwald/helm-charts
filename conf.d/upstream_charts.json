@@ -14,5 +14,9 @@
   {
     "repository": "mittwald/kubernetes-secret-generator",
     "chartPath": "deploy/helm-chart/kubernetes-secret-generator"
+  },
+  {
+    "repository": "mittwald/harbor-operator",
+    "chartPath": "deploy/helm-chart/harbor-operator"
   }
 ]
