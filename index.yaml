@@ -171,6 +171,17 @@ entries:
     urls:
     - https://github.com/mittwald/helm-charts/releases/download/brudi-operator-0.0.1/brudi-operator-0.0.1.tgz
     version: 0.0.1
+  harbor-operator:
+  - apiVersion: v2
+    appVersion: v0.1.0
+    created: "2020-05-06T12:15:16.642891414Z"
+    description: A Kubernetes operator for managing goharbor instances
+    digest: 363fb18a2ee907828fe74dc32c1be8def1a8dd5f0c1955c5dbc9a607e4d5eb69
+    name: harbor-operator
+    type: application
+    urls:
+    - https://github.com/mittwald/helm-charts/releases/download/harbor-operator-0.1.0/harbor-operator-0.1.0.tgz
+    version: 0.1.0
   kubernetes-replicator:
   - apiVersion: v1
     appVersion: v2.3.0
