@@ -449,6 +449,16 @@ entries:
     version: 2.1.1
   servicegateway:
   - apiVersion: v2
+    appVersion: v2.1.0
+    created: "2020-07-31T06:19:47.400502681Z"
+    description: service gateway for microservice architectures
+    digest: 332f1b06bd873761cd4374ca39d652fe72af7ed3853aeb77aa072cb175ab7fe4
+    name: servicegateway
+    type: application
+    urls:
+    - https://github.com/mittwald/helm-charts/releases/download/servicegateway-2.1.0/servicegateway-2.1.0.tgz
+    version: 2.1.0
+  - apiVersion: v2
     appVersion: v2.0.2
     created: "2020-04-19T06:49:55.607737943Z"
     description: service gateway for microservice architectures
