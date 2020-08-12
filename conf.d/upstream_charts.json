@@ -18,5 +18,9 @@
   {
     "repository": "mittwald/harbor-operator",
     "chartPath": "deploy/helm-chart/harbor-operator"
+  },
+  {
+    "repository": "mittwald/kube-av",
+    "chartPath": "deploy/chart"
   }
 ]
