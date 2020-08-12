@@ -21,6 +21,6 @@
   },
   {
     "repository": "mittwald/kube-av",
-    "chartPath": "deploy/chart"
+    "chartPath": "deploy/helm-chart/kubeav"
   }
 ]
