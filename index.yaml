@@ -372,6 +372,17 @@ entries:
     urls:
     - https://github.com/mittwald/helm-charts/releases/download/harbor-operator-0.1.0/harbor-operator-0.1.0.tgz
     version: 0.1.0
+  kubeav:
+  - apiVersion: v2
+    appVersion: v1.0.0-alpha2
+    created: "2020-08-12T07:33:05.215563247Z"
+    description: AntiVirus automation for Kubernetes
+    digest: a7f3612fca7f2f3627755ac24031aaa0105c634042bd9a49cd812edf79975676
+    name: kubeav
+    type: application
+    urls:
+    - https://github.com/mittwald/helm-charts/releases/download/kubeav-1.0.0-alpha2/kubeav-1.0.0-alpha2.tgz
+    version: 1.0.0-alpha2
   kubernetes-replicator:
   - apiVersion: v1
     appVersion: v2.3.0
