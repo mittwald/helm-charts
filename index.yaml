@@ -392,6 +392,15 @@ entries:
     urls:
     - https://github.com/mittwald/helm-charts/releases/download/harbor-operator-0.1.0/harbor-operator-0.1.0.tgz
     version: 0.1.0
+  kube-mail:
+  - apiVersion: v1
+    created: "2020-08-27T09:05:40.553595373Z"
+    description: A Helm chart for KubeMail
+    digest: 89b280d8638bfc7d9231a93f3877cd8fb185aac764ac0ea74ea069c69a18fa5c
+    name: kube-mail
+    urls:
+    - https://github.com/mittwald/helm-charts/releases/download/kube-mail-0.1.0/kube-mail-0.1.0.tgz
+    version: 0.1.0
   kubeav:
   - apiVersion: v2
     appVersion: v1.0.0-alpha4
