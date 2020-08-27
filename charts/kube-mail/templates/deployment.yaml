@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "chart.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ template "chart.name" . }}
+    helm.sh/chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ template "chart.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ template "chart.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+      {{- if .Values.prometheus.enabled }}
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: 9100
+        prometheus.io/path: "/metrics"
+      {{- end }}
+    spec:
+      {{- if .Values.rbac.enabled }}
+      serviceAccountName: {{ template "chart.fullname" . }}
+      {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: {{ .Values.smtp.service.internalPort }}
+              name: smtp
+            - containerPort: 9100
+              name: metrics
+          livenessProbe:
+            httpGet:
+              path: /status
+              port: 9100
+          readinessProbe:
+            httpGet:
+              path: /readiness
+              port: 9100
+          env:
+            - name: KUBEMAIL_KUBERNETES_INCLUSTER
+              value: "true"
+            - name: DEBUG
+              value: "*"
+            {{- if .Values.watcher.emailPolicyInformer.selector }}
+            - name: WATCHER_EMAILPOLICYINFORMER_SELECTOR
+              value: |-
+                {{ toJson .Values.watcher.emailPolicyInformer.selector }}
+            {{- end }}
+            {{- if .Values.watcher.podInformer.selector }}
+            - name: WATCHER_PODINFORMER_SELECTOR
+              value: |-
+                {{ toJson .Values.watcher.podInformer.selector }}
+            {{- end }}
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+    {{- if .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml .Values.nodeSelector | indent 8 }}
+    {{- end }}
