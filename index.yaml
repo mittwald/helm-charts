@@ -394,6 +394,14 @@ entries:
     version: 0.1.0
   kube-mail:
   - apiVersion: v1
+    created: "2020-08-27T09:58:01.986246513Z"
+    description: A Helm chart for KubeMail
+    digest: efe79712c9d4c10fe1f6164f1a57169d77135b74e9318e76aca67718937cbb64
+    name: kube-mail
+    urls:
+    - https://github.com/mittwald/helm-charts/releases/download/kube-mail-0.5.0/kube-mail-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v1
     created: "2020-08-27T09:05:40.553595373Z"
     description: A Helm chart for KubeMail
     digest: 89b280d8638bfc7d9231a93f3877cd8fb185aac764ac0ea74ea069c69a18fa5c
