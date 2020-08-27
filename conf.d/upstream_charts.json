@@ -22,5 +22,9 @@
   {
     "repository": "mittwald/kube-av",
     "chartPath": "deploy/helm-chart/kubeav"
+  },
+  {
+    "repository": "mittwald/kube-mail",
+    "chartPath": "deploy/helm-chart/kube-mail"
   }
 ]
