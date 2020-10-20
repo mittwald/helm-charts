@@ -493,6 +493,16 @@ entries:
     version: 0.1.0
   kubeav:
   - apiVersion: v2
+    appVersion: v1.0.0-alpha6
+    created: "2020-10-20T13:07:22.244526009Z"
+    description: AntiVirus automation for Kubernetes
+    digest: b8c086c85954547fb1f0d7b3123568b35e65e3d3b66db7f2c176469f36c4d62d
+    name: kubeav
+    type: application
+    urls:
+    - https://github.com/mittwald/helm-charts/releases/download/kubeav-1.0.0-alpha6/kubeav-1.0.0-alpha6.tgz
+    version: 1.0.0-alpha6
+  - apiVersion: v2
     appVersion: v1.0.0-alpha4
     created: "2020-08-12T09:09:53.903390074Z"
     description: AntiVirus automation for Kubernetes
