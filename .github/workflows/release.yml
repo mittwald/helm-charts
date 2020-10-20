@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       # Chart-Releaser requires helmv3
       # Build-Charts script requires jq
@@ -47,7 +47,7 @@ jobs:
 
       # Get those charts to github pages
       - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.0.0-rc.2
+        uses: helm/chart-releaser-action@v1.0.0
         with:
           charts_dir: ./charts
         env:
