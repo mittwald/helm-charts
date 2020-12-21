@@ -1,21 +1,17 @@
 {{- range $instance := .Values.instances }}
   {{- range $repl := .replications }}
-apiVersion: registries.mittwald.de/v1alpha1
+apiVersion: registries.mittwald.de/v1alpha2
 kind: Replication
 metadata:
   name: {{ $instance.name }}-{{ $repl.name }}
   labels:
-    {{- include "chart.labels" $ | nindent 4 }}
+    {{- include "harbor-operator.labels" $ | nindent 4 }}
 spec:
   parentInstance:
     name: {{ $instance.name }}
   name: {{ $repl.name }}
   override: {{ $repl.override }}
   triggerAfterCreation: {{ $repl.triggerAfterCreation }}
-
-  {{- if $repl.id }}
-  id: {{ $repl.id }}
-  {{- end }}
 
   {{- if $repl.description }}
   description: {{ $repl.description }}

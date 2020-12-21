@@ -1,11 +1,11 @@
 {{- range $instance := .Values.instances }}
   {{- range $registry := .registries }}
-apiVersion: registries.mittwald.de/v1alpha1
+apiVersion: registries.mittwald.de/v1alpha2
 kind: Registry
 metadata:
   name: {{ $instance.name }}-{{ $registry.name }}
   labels:
-    {{- include "chart.labels" $ | nindent 4 }}
+  {{- include "harbor-operator.labels" $ | nindent 4 }}
 spec:
   parentInstance:
     name: {{ $instance.name }}
@@ -13,9 +13,6 @@ spec:
   type: {{ $registry.type }}
   url: {{ $registry.url }}
 
-  {{- if $registry.id }}
-  id: {{ $registry.id }}
-  {{- end }}
 
   {{- if $registry.description }}
   description: {{ $registry.description }}
@@ -23,7 +20,7 @@ spec:
 
   {{- with $registry.credential }}
   credential:
-    {{- toYaml . | nindent 4 }}
+  {{- toYaml . | nindent 4 }}
   {{- end }}
 
   {{- if $registry.insecure }}
