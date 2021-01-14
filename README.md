@@ -44,6 +44,30 @@ curl -X POST 'https://api.github.com/repos/mittwald/helm-charts/dispatches' \
 -d '{"event_type": "updateCharts"}'
 ```
 
+### Regenerate Charts
+
+In case the generator fails for some reason and the "chart-update-commit" is
+already superseded by a newer one, it won't generate the chart again.
+
+However, this can also be done manually:
+
+```sh
+# clone the repo
+git clone https://github.com/mittwald/helm-charts
+cd helm-charts
+
+cr package charts/CHART_NAME
+
+# COMMIT_HASH is the commit the release will be created for
+cr upload -c COMMIT_HASH -r helm-charts --owner mittwald --token YOUR_GITHUB_TOKEN
+
+git checkout gh-pages
+
+# make sure the packages chart is still stored in ./.cr-release-packages
+# it may be wise do a dry run without `--token` first
+cr index -r helm-charts -c https://helm.mittwald.de --owner mittwald --pages-branch gh-pages --index-path index.yaml --push --token YOUR_GITHUB_TOKEN
+```
+
 ## License
 
 [MIT](./LICENSE)
