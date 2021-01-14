@@ -4,8 +4,7 @@ entries:
   - apiVersion: v1
     appVersion: 0.0.3-beta.2
     created: "2020-03-20T15:13:14.584811427Z"
-    description: A Helm chart for deploying the brudi-operator to your kubernetes
-      cluster
+    description: A Helm chart for deploying the brudi-operator to your kubernetes cluster
     digest: 0a23855c180216f21d628cf5bfd718d53ccdecbe47ff55f90823d97bc06e5559
     name: brudi-operator
     urls:
@@ -14,8 +13,7 @@ entries:
   - apiVersion: v1
     appVersion: 0.0.3-beta.1
     created: "2020-03-20T14:58:08.645568124Z"
-    description: A Helm chart for deploying the brudi-operator to your kubernetes
-      cluster
+    description: A Helm chart for deploying the brudi-operator to your kubernetes cluster
     digest: 8435601fdce1182310eb80548a0f592f01dee4ec66c7d08999fba2670677cb3a
     name: brudi-operator
     urls:
@@ -24,8 +22,7 @@ entries:
   - apiVersion: v1
     appVersion: 0.0.1-beta.11
     created: "2020-03-18T10:46:42.025971963Z"
-    description: A Helm chart for deploying the brudi-operator to your kubernetes
-      cluster
+    description: A Helm chart for deploying the brudi-operator to your kubernetes cluster
     digest: 64a56799e1af7d5bfc11e568dbe1413b8b78f3694ab7b77ef92213b608c2641f
     name: brudi-operator
     urls:
@@ -34,8 +31,7 @@ entries:
   - apiVersion: v1
     appVersion: 0.0.1-beta.10
     created: "2020-03-18T10:16:05.717761977Z"
-    description: A Helm chart for deploying the brudi-operator to your kubernetes
-      cluster
+    description: A Helm chart for deploying the brudi-operator to your kubernetes cluster
     digest: ea91cff1c01d85a58028dcb77871404fafc78acda9f863be9918faff5bcb91a4
     name: brudi-operator
     urls:
@@ -44,8 +40,7 @@ entries:
   - apiVersion: v1
     appVersion: v0.0.1-beta.8
     created: "2020-03-18T10:06:12.902990955Z"
-    description: A Helm chart for deploying the brudi-operator to your kubernetes
-      cluster
+    description: A Helm chart for deploying the brudi-operator to your kubernetes cluster
     digest: cfae9aaae7b1b411e989e7f377c74829aead1d67e61d972c14e88306c4b74d38
     name: brudi-operator
     urls:
@@ -54,8 +49,7 @@ entries:
   - apiVersion: v1
     appVersion: v0.0.1-beta.7
     created: "2020-03-18T08:49:53.05291247Z"
-    description: A Helm chart for deploying the brudi-operator to your kubernetes
-      cluster
+    description: A Helm chart for deploying the brudi-operator to your kubernetes cluster
     digest: f234a6e6577aab509c3210791cc018f6733c441005e8439af8e2b70efcddaf9b
     name: brudi-operator
     urls:
@@ -64,8 +58,7 @@ entries:
   - apiVersion: v1
     appVersion: v0.0.1-beta.6
     created: "2020-03-18T07:34:42.283176385Z"
-    description: A Helm chart for deploying the brudi-operator to your kubernetes
-      cluster
+    description: A Helm chart for deploying the brudi-operator to your kubernetes cluster
     digest: 217d0912a3b2ad3cab8bfc9bcf61d20d30951752956ccee246e809cbb778ed04
     name: brudi-operator
     urls:
@@ -74,8 +67,7 @@ entries:
   - apiVersion: v1
     appVersion: v0.0.1-beta.5
     created: "2020-03-17T17:30:56.633451989Z"
-    description: A Helm chart for deploying the brudi-operator to your kubernetes
-      cluster
+    description: A Helm chart for deploying the brudi-operator to your kubernetes cluster
     digest: b98b61f46939977710c40e985a47c6d8e4dc51138c5b3b4487a3bbc06f5cf980
     name: brudi-operator
     urls:
@@ -84,8 +76,7 @@ entries:
   - apiVersion: v1
     appVersion: v0.0.1-beta.4
     created: "2020-03-17T17:08:30.112145883Z"
-    description: A Helm chart for deploying the brudi-operator to your kubernetes
-      cluster
+    description: A Helm chart for deploying the brudi-operator to your kubernetes cluster
     digest: b8795f3ee4577e6f5d46ba4e263e8cee9cbcb1adf4e1c6bab1352a12018e684f
     name: brudi-operator
     urls:
@@ -94,8 +85,7 @@ entries:
   - apiVersion: v1
     appVersion: v0.0.1-beta.3
     created: "2020-03-17T16:32:36.333962058Z"
-    description: A Helm chart for deploying the brudi-operator to your kubernetes
-      cluster
+    description: A Helm chart for deploying the brudi-operator to your kubernetes cluster
     digest: 2a3e878a5ee8827f7181ebd5bf04b90bde93eade96278b087c3a3659fb5e3f3c
     name: brudi-operator
     urls:
@@ -104,8 +94,7 @@ entries:
   - apiVersion: v1
     appVersion: v0.0.1-beta.3
     created: "2020-03-17T16:15:27.169827477Z"
-    description: A Helm chart for deploying the brudi-operator to your kubernetes
-      cluster
+    description: A Helm chart for deploying the brudi-operator to your kubernetes cluster
     digest: 9b2f9a8f88e100c860d03babbeb1dfbcd06cb208720126b3cf59f9917a8aac47
     name: brudi-operator
     urls:
@@ -114,8 +103,7 @@ entries:
   - apiVersion: v1
     appVersion: v0.0.1-beta.2
     created: "2020-03-17T16:09:00.82918422Z"
-    description: A Helm chart for deploying the brudi-operator to your kubernetes
-      cluster
+    description: A Helm chart for deploying the brudi-operator to your kubernetes cluster
     digest: a0af72b46304c0dd5ccbdf3e5344279f951065600049317b22990cba2dac9652
     name: brudi-operator
     urls:
@@ -124,8 +112,7 @@ entries:
   - apiVersion: v1
     appVersion: v0.0.1-beta.1
     created: "2020-03-17T15:57:11.303123552Z"
-    description: A Helm chart for deploying the brudi-operator to your kubernetes
-      cluster
+    description: A Helm chart for deploying the brudi-operator to your kubernetes cluster
     digest: f553ee27b55d09a6de590efa261c3f1a050761d19168a83830793d73c7538cd1
     name: brudi-operator
     urls:
@@ -134,8 +121,7 @@ entries:
   - apiVersion: v1
     appVersion: v0.0.1-beta.1
     created: "2020-03-17T15:45:56.462300824Z"
-    description: A Helm chart for deploying the brudi-operator to your kubernetes
-      cluster
+    description: A Helm chart for deploying the brudi-operator to your kubernetes cluster
     digest: 02f3d24b1de905af1d87f10a059d9dc46bb5825c6205672980b7dba5d5f2f9ed
     name: brudi-operator
     urls:
@@ -144,8 +130,7 @@ entries:
   - apiVersion: v1
     appVersion: v0.0.1-beta.1
     created: "2020-03-17T14:18:17.84242012Z"
-    description: A Helm chart for deploying the brudi-operator to your kubernetes
-      cluster
+    description: A Helm chart for deploying the brudi-operator to your kubernetes cluster
     digest: 734c0434bb460e0962bb9adb2faf606b45ee39f46009dc05e7ac6392763371d4
     name: brudi-operator
     urls:
@@ -154,8 +139,7 @@ entries:
   - apiVersion: v1
     appVersion: v0.0.1-beta.1
     created: "2020-03-17T13:28:00.231940268Z"
-    description: A Helm chart for deploying the brudi-operator to your kubernetes
-      cluster
+    description: A Helm chart for deploying the brudi-operator to your kubernetes cluster
     digest: bdcb976a64f1adf474c26d90063e03fa1e83d1bf925dad48bb016d4f9a1a07fe
     name: brudi-operator
     urls:
@@ -164,8 +148,7 @@ entries:
   - apiVersion: v1
     appVersion: v0.0.1-beta.1
     created: "2020-03-17T13:00:28.448714799Z"
-    description: A Helm chart for deploying the brudi-operator to your kubernetes
-      cluster
+    description: A Helm chart for deploying the brudi-operator to your kubernetes cluster
     digest: 418af038e194fd4565f323a4d85727ef8d80b671d248143b8ca5a6d08355e1fb
     name: brudi-operator
     urls:
@@ -607,6 +590,16 @@ entries:
     - https://github.com/mittwald/helm-charts/releases/download/kubernetes-replicator-0.1.0/kubernetes-replicator-0.1.0.tgz
     version: 0.1.0
   kubernetes-secret-generator:
+  - apiVersion: v2
+    appVersion: v3.2.0
+    created: "2021-01-14T18:24:07.955349408+01:00"
+    description: Controller for automatically creating random secret values
+    digest: c07b71f4ac2d3180b7f6f1ea18e0c80248f5d9a7a790a2ac0050cd8549062cc0
+    name: kubernetes-secret-generator
+    type: application
+    urls:
+    - https://github.com/mittwald/helm-charts/releases/download/kubernetes-secret-generator-3.2.0/kubernetes-secret-generator-3.2.0.tgz
+    version: 3.2.0
   - apiVersion: v2
     appVersion: v3.1.0
     created: "2020-08-27T14:18:05.319603467Z"
