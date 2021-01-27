@@ -54,6 +54,8 @@ for cR in $(jq -r '.[] | @base64' "${CHART_REPOS}"); do
         exit ${RET_CODE}
     fi
 
+    rm -rf "${CHART_DESTINATION}/*"
+
     cp -avL "${GITHUB_REPOSITORY_TEMP_CHART}" "${CHART_DESTINATION}/."
 done
 
