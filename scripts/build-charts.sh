@@ -42,12 +42,13 @@ for cR in $(jq -r '.[] | @base64' "${CHART_REPOS}"); do
     GITHUB_URL="https://github.com/${GITHUB_REPOSITORY}.git"
 
     CHART_PATH="$(_jq '.chartPath')"
+    BRANCH_NAME="$(_jq '.branch')"
 
     GITHUB_REPOSITORY_TEMP="${TMP_DIR}/${GITHUB_REPOSITORY}/"
     GITHUB_REPOSITORY_TEMP_CHART="${TMP_DIR}/${GITHUB_REPOSITORY}/${CHART_PATH}"
 
     mkdir -p "${GITHUB_REPOSITORY_TEMP}"
-    git clone "${GITHUB_URL}" "${GITHUB_REPOSITORY_TEMP}" &>"${OUTFILE}"
+    git clone --branch "${BRANCH_NAME}" "${GITHUB_URL}" "${GITHUB_REPOSITORY_TEMP}" &>"${OUTFILE}"
     RET_CODE="${?}"
     if [[ ${RET_CODE} -ne 0 ]]; then
         cat "${OUTFILE}"
