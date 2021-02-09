@@ -156,6 +156,16 @@ entries:
     version: 0.0.1
   harbor-operator:
   - apiVersion: v2
+    appVersion: v1.3.4
+    created: "2021-02-09T08:31:27.401504193+01:00"
+    description: A Kubernetes operator for managing goharbor instances
+    digest: 902112a1d432c5cfa0f8ed4c0f87554878074a23cc76157c71335b463c427acb
+    name: harbor-operator
+    type: application
+    urls:
+    - https://github.com/mittwald/helm-charts/releases/download/harbor-operator-1.3.4/harbor-operator-1.3.4.tgz
+    version: 1.3.4
+  - apiVersion: v2
     appVersion: v1.3.3
     created: "2021-02-08T15:54:14.411638027+01:00"
     description: A Kubernetes operator for managing goharbor instances
