@@ -757,6 +757,21 @@ entries:
     urls:
     - https://github.com/mittwald/helm-charts/releases/download/kubernetes-secret-generator-2.1.1/kubernetes-secret-generator-2.1.1.tgz
     version: 2.1.1
+  pypiserver:
+  - apiVersion: v2
+    appVersion: v1.4.2
+    created: "2021-02-09T11:41:38.541236876+01:00"
+    description: |
+      Deploy your own pypi-server to your k8s-cluster.
+
+      https://github.com/pypiserver/pypiserver
+      https://github.com/mittwald/pypiserver-helm
+    digest: ceee8e610e5aafd5439d50672e88b1384301f16bff36dc71df08b7bc3b9a34d7
+    name: pypiserver
+    type: application
+    urls:
+    - https://github.com/mittwald/helm-charts/releases/download/pypiserver-0.0.1/pypiserver-0.0.1.tgz
+    version: 0.0.1
   servicegateway:
   - apiVersion: v2
     appVersion: v2.2.0
