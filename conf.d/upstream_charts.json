@@ -38,5 +38,10 @@
     "repository": "mittwald/pypiserver-helm",
     "branch": "main",
     "chartPath": "pypiserver"
+  },
+  {
+    "repository": "mittwald/aptly-helm",
+    "branch": "main",
+    "chartPath": "aptly"
   }
 ]
