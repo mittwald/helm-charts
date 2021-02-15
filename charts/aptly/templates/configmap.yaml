@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: {{ include "chart.fullname" . }}-config
   labels: {{- include "chart.labels" . | nindent 4 }}
-data: {{ .Values.config | toJson | nindent 2 }}
+data: | {{ .Values.config | toJson | nindent 2 }}
