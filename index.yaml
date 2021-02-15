@@ -1,5 +1,21 @@
 apiVersion: v1
 entries:
+  aptly:
+  - apiVersion: v2
+    appVersion: 1.4.0
+    created: "2021-02-15T11:38:52.408430392+01:00"
+    description: |
+      Deploy your own 'aptly' to your k8s-cluster.
+
+      https://github.com/mittwald/aptly-docker
+      https://github.com/mittwald/aptly-helm
+      https://github.com/aptly-dev/aptly
+    digest: 5fc320b68e20d3f9729e1aa5689dfcfde4c61df44415499afbe4100e316a0513
+    name: aptly
+    type: application
+    urls:
+    - https://github.com/mittwald/helm-charts/releases/download/aptly-0.0.1/aptly-0.0.1.tgz
+    version: 0.0.1
   brudi-operator:
   - apiVersion: v1
     appVersion: 0.0.3-beta.2
