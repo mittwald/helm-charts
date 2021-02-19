@@ -1,6 +1,8 @@
 # :warning: THIS REPOSITORY IS ARCHIVED :warning:  
 
-## THE SOURCE OF `helm.mittwald.de` IS NOW HOSTED ON OUR OWN INFRASTRUCTURE :warning:
+## :warning: THE SOURCE OF `helm.mittwald.de` IS NOW HOSTED ON OUR OWN INFRASTRUCTURE :warning:
+
+This repository will stay here since it still provides downloads for some old helm-chart versions.
 
 ## Mittwald's Kubernetes Helm Charts
 
