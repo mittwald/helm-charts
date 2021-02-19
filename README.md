@@ -1,4 +1,10 @@
-# Mittwald's Kubernetes Helm Charts
+# :warning: THIS REPOSITORY IS ARCHIVED :warning:  
+
+## :warning: THE SOURCE OF `helm.mittwald.de` IS NOW HOSTED ON OUR OWN INFRASTRUCTURE :warning:
+
+This repository will stay here since it still provides downloads for some old helm-chart versions.
+
+## Mittwald's Kubernetes Helm Charts
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ![Release Charts](https://github.com/mittwald/helm-charts/workflows/Release%20Charts/badge.svg)
